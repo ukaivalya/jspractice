@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="items">Choose the Items List:</label>
+    <select  id="items" onChange="listOfItems()">
+        <option value="kaivalya">kaivalya</option>
+        <option value="mahitha">mahitha</option>
+    </select>
+    <select id="itemlist"></select>      
+    
+    <script>
+        var itemDetails = {};
+            itemDetails['kaivalya']=['chandamama','watchingtv','pulihora']
+            itemDetails['mahitha']=['robinhood','playing','biryani']
+      function listOfItems(){
+        var items = document.getElementById("items")
+        var itemsList = document.getElementById("itemlist")
+        var selItem = items.options[items.selectedIndex].value;
+        while(itemsList.options.length){
+            itemsList.remove(0);
+        }
+
+        var item = itemDetails[selItem]
+        if(item){
+            for(var i=0;i<item.length;i++){
+                var resultItem = new Option(item[i],i)
+                itemsList.options.add(resultItem)
+            }
+        }
+    }
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+  }
+  #stripe {
+      background-color: white;
+      text-align: center;
+      height: 50px;
+      color: black;
+  }
+  
+  button {
+      border: 1px solid grey ;
+      float: left;
+      background: none;
+      background-color: #D3D3D3;
+      color: white;
+      text-transform: camelcase;
+      height: 100%;
+      font-weight: 700;
+      color: black;
+      letter-spacing: 1px;
+      font-size: inherit;
+      transition: all 0.3s;
+      outline: none;
+  }
+  
+  button:hover {
+      color: white;
+      background: black;
+
+  }
+  
+  .selected {
+    color: white;
+    background: black;
+}

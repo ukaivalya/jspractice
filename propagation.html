@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id = "parent">
+        <h1 >Parent is clicked</h1>
+        <p id ="children">Children1 is clicked</p>
+        <p id ="children">Children2 is clicked</p>    
+    </div>
+    <script>
+         const parentDetails = document.getElementById("parent")
+         const childDetails = document.getElementById("children")
+        // const childDetails2 = document.getElementById("children")
+         parentDetails.addEventListener("click",()=>{console.log("parent clicked successfully")})
+         //childDetails.addEventListener("click",(event)=>{(event.stopPropagation());console.log("child clicked successfully")})
+         
+         childDetails.addEventListener("click",(event)=>{(event.stopImmediatePropagation());console.log("child2 clicked successfully")})
+         childDetails.addEventListener("click",()=>{console.log("child1 clicked successfully")})
+    </script>
+    
+
+    
+</body>
+</html>

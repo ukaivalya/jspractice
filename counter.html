@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        .container{
+            position: relative;
+            border:5px;
+            height: 10vh;
+            justify-content:center;
+            display:flex;
+            padding-top:100px;
+            
+           
+         }
+         .counter{
+             position:absolute;
+             padding-bottom:50px;
+         }
+         #value{
+             position: absolute;
+             justify-content:center;
+             margin-left: 680px;            
+             display:flex; 
+             padding-top: 10px;          
+         }
+         .button-container{
+             position:absolute;
+             justify-content:center;
+             display:flex;
+             padding-top:50px;
+             margin-left: 600px;
+             
+         }
+         /* .button{
+             position:absolute;
+         } */
+    </style>
+    
+</head>
+<body>
+    <!--HTML Content-->
+   <main>
+       <div class="container">
+           <h1 class="counter">Counter</h1>
+       </div>
+       <span id="value"><b>0</b></span>
+       <div class="button-container">
+           <button class="button increase" >increase</button>
+           <button class="button reset">reset</button>
+           <button class="button decrease">decrease</button>
+       </div>
+
+      
+  </main> 
+  <!--Javascript Code-->
+  <script src="app.js"></script>
+</body>
+</html>
